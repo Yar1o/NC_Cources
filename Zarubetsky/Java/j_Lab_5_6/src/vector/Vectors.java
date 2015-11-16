@@ -6,7 +6,9 @@
 package vector;
 
 import java.io.*;
-import vector.impl.*;
+import vector.impl.ArrayVector;
+import vector.impl.LinkedVector;
+
 
 /**
  *
@@ -76,33 +78,63 @@ public class Vectors {
         st.nextToken();        
         int size = (int)st.nval;
         ArrayVector arr = new ArrayVector(size);
-        for (int i = 0; i < size; i++) {                   //////////////
+        for (int i = 0; i < size; i++) {                   
             st.nextToken();
-            arr.setElement(i,(int)st.nval); 
+            arr.setElement(i,(double)st.nval); 
         }
         return arr;        
     }
     
     public static void main(String[] args) 
-            throws vector.Exceptions.IncompatibleVectorSizesException, IOException{
-        double[] students = { 1, 2, 3, 4, 5, 6 };
-	ArrayVector v = new ArrayVector(students.length);
-	v.fillFromMass(students);
-		
-	DataOutputStream out = new DataOutputStream(new FileOutputStream("students.bin"));
-        outputVector(v, out);
-	out.close();
+            throws vector.Exceptions.IncompatibleVectorSizesException, IOException,ClassNotFoundException{
 
-	PrintWriter out2 = new PrintWriter(new BufferedWriter(new FileWriter("out.txt")));
-	writeVector(v, out2);
+        double[] students = { 1.3, 2.8, 3.4, 4.1, 5.3, 6.6 };
+	ArrayVector vect = new ArrayVector(students.length);
+	vect.fillFromMass(students);
+		
+	DataOutputStream out1 = new DataOutputStream(new FileOutputStream("students.bin"));
+        outputVector(vect, out1);
+	out1.close();
+
+	PrintWriter out2 = new PrintWriter(new BufferedWriter(new FileWriter("out1.txt")));
+	writeVector(vect, out2);
 	out2.close();
 		
-	BufferedReader in1 = new BufferedReader(new FileReader("out.txt"));
-	System.out.println(readVector(in1));
+	BufferedReader in1 = new BufferedReader(new FileReader("out1.txt"));
+	System.out.println("Read from text file:            "+readVector(in1));
         in1.close();
         
         InputStream in2 = new FileInputStream("students.bin");
-        System.out.println(inputVector(in2));
+        System.out.println("Read from binary file:          "+inputVector(in2));
         in2.close();
+                
+        // ArrayVector serialization
+        // Test serialization
+	ObjectOutputStream out3 = new ObjectOutputStream(new FileOutputStream("out.bin"));
+	out3.writeObject(vect);
+	out3.close();
+        System.out.println("Serialization of ArrayVector:   " + vect.toString());
+        
+	// Test deserialization
+	ObjectInputStream in3 = new ObjectInputStream(new FileInputStream("out.bin"));
+	vect = (ArrayVector) in3.readObject();
+	in3.close();
+	System.out.println("Deserialization of ArrayVector: " + vect.toString());	
+        
+        // LinkedVector serialization
+        LinkedVector lvect = new LinkedVector();
+	lvect.fillFromMass(students);
+        
+        // Test serialization
+	ObjectOutputStream out4 = new ObjectOutputStream(new FileOutputStream("out2.bin"));
+	out4.writeObject(lvect);
+	out4.close();
+        System.out.println("Serialization of LinkedVector:  " + lvect.toString());
+        
+        // Test deserialization
+	ObjectInputStream in4 = new ObjectInputStream(new FileInputStream("out2.bin"));
+	lvect = (LinkedVector) in4.readObject();
+	in4.close();
+	System.out.println("Deserialization of LinkedVector:" + lvect.toString());	
     }
 }

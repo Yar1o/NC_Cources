@@ -19,8 +19,7 @@ public class LinkedVector implements Vector, Cloneable, Serializable{
     protected Nod head;
     protected int size;
 
-    // Inner Class for Nodes
-    public class Nod {
+    public class Nod implements Serializable{
 	public double element;
 	public Nod next;
 	public Nod prev;

@@ -19,16 +19,8 @@ public class JavaVectorApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    }    
-}
         
-        
-        
-        
-        
-        
-        //BufferedReader in = new BufferedReader(new FileReader("out.txt")); // InputStreamReader(System.in));
-//
+   //     BufferedReader in = new BufferedReader(new FileReader("out.txt")); // InputStreamReader(System.in));
 //	LinkedVector lv = new LinkedVector();
 //	lv.fillFromMass(dogs);
 		
@@ -49,7 +41,17 @@ public class JavaVectorApp {
 //	v = (ArrayVector) in1.readObject();
 //	in1.close();
 //
-//	System.out.println(v.toString());
+//	System.out.println(v.toString());    
+        
+    }    
+}
+        
+        
+        
+        
+        
+        
+
         
         
         
