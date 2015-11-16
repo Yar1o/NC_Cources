@@ -1,0 +1,115 @@
+1 rows inserted.
+1 rows updated.
+EMPLOYEE                                       JOB_TITLE                               SALARY NOT_SINGLE_POSITION_IN_COMPANY
+---------------------------------------------- ----------------------------------- ---------- ------------------------------
+Steven King                                    Public Relations Representative            666 Y                              
+Trenna Rajs                                    Stock Clerk                               3500 N                              
+Curtis Davies                                  Stock Clerk                               3100 N                              
+Julia Dellinger                                Shipping Clerk                            3400 N                              
+Alana Walsh                                    Shipping Clerk                            3100 N                              
+Kevin Feeney                                   Shipping Clerk                            3000 N                              
+Pat Fay                                        Marketing Representative                  6000 N                              
+Susan Mavris                                   Human Resources Representative            6500 N                              
+Nancy Greenberg                                Finance Manager                          12000 N                              
+Jose Manuel Urman                              Accountant                                7800 N                              
+Den Raphaely                                   Purchasing Manager                       11000 Y                              
+Shanta Vollman                                 Stock Manager                             6500 N                              
+Mozhe Atkinson                                 Stock Clerk                               2800 N                              
+James Marlow                                   Stock Clerk                               2500 N                              
+Ki Gee                                         Stock Clerk                               2400 N                              
+John Seo                                       Stock Clerk                               2700 N                              
+Randall Matos                                  Stock Clerk                               2600 N                              
+Peter Vargas                                   Stock Clerk                               2500 N                              
+Gerald Cambrault                               Sales Manager                            11000 N                              
+Louise Doran                                   Sales Representative                      7500 N                              
+Amit Banda                                     Sales Representative                      6200 N                              
+Samuel McCain                                  Shipping Clerk                            3200 N                              
+Vance Jones                                    Shipping Clerk                            2800 N                              
+Douglas Grant                                  Shipping Clerk                            2600 N                              
+Bruce Ernst                                    Programmer                                6000 N                              
+Ismael Sciarra                                 Accountant                                7700 N                              
+Adam Fripp                                     Stock Manager                             8200 N                              
+Julia Nayer                                    Stock Clerk                               3200 N                              
+Clara Vishney                                  Sales Representative                     10500 N                              
+Danielle Greene                                Sales Representative                      9500 N                              
+Mattea Marvins                                 Sales Representative                      7200 N                              
+Lisa Ozer                                      Sales Representative                     11500 N                              
+Harrison Bloom                                 Sales Representative                     10000 N                              
+Alyssa Hutton                                  Sales Representative                      8800 N                              
+Anthony Cabrio                                 Shipping Clerk                            3000 N                              
+Sarah Bell                                     Shipping Clerk                            4000 N                              
+Michael Hartstein                              Marketing Manager                        13000 Y                              
+David Austin                                   Programmer                                4800 N                              
+Alexander Khoo                                 Purchasing Clerk                          3100 N                              
+Payam Kaufling                                 Stock Manager                             7900 Y                              
+Kevin Mourgos                                  Stock Manager                             5800 N                              
+Laura Bissot                                   Stock Clerk                               3300 N                              
+Michael Rogers                                 Stock Clerk                               2900 N                              
+Joshua Patel                                   Stock Clerk                               2500 N                              
+Eleni Zlotkey                                  Sales Manager                            10500 N                              
+Christopher Olsen                              Sales Representative                      8000 N                              
+Oliver Tuvault                                 Sales Representative                      7000 N                              
+William Smith                                  Sales Representative                      7400 N                              
+Ellen Abel                                     Sales Representative                     11000 N                              
+Jonathon Taylor                                Sales Representative                      8600 Y                              
+Jean Fleaur                                    Shipping Clerk                            3100 N                              
+Martha Sullivan                                Shipping Clerk                            2500 N                              
+Alexis Bull                                    Shipping Clerk                            4100 N                              
+Timothy Gates                                  Shipping Clerk                            2900 N                              
+Hermann Baer                                   Public Relations Representative          10000 N                              
+William Gietz                                  Public Accountant                         8300 N                              
+Daniel Faviet                                  Accountant                                9000 N                              
+Guy Himuro                                     Purchasing Clerk                          2600 N                              
+Karen Colmenares                               Purchasing Clerk                          2500 N                              
+Steven Markle                                  Stock Clerk                               2200 N                              
+Jason Mallin                                   Stock Clerk                               3300 N                              
+Peter Hall                                     Sales Representative                      9000 N                              
+Sundita Kumar                                  Sales Representative                      6100 N                              
+Jack Livingston                                Sales Representative                      8400 N                              
+Kimberely Grant                                Sales Representative                      7000 N                              
+Winston Taylor                                 Shipping Clerk                            3200 N                              
+Girard Geoni                                   Shipping Clerk                            2800 N                              
+Jennifer Dilly                                 Shipping Clerk                            3600 N                              
+Britney Everett                                Shipping Clerk                            3900 N                              
+Neena Kochhar                                  Administration Vice President            17000 Y                              
+Valli Pataballa                                Programmer                                4800 N                              
+Luis Popp                                      Accountant                                6900 N                              
+Shelli Baida                                   Purchasing Clerk                          2900 N                              
+Matthew Weiss                                  Stock Manager                             8000 N                              
+TJ Olson                                       Stock Clerk                               2100 N                              
+Renske Ladwig                                  Stock Clerk                               3600 N                              
+Peter Tucker                                   Sales Representative                     10000 N                              
+Nanette Cambrault                              Sales Representative                      7500 N                              
+Lindsey Smith                                  Sales Representative                      8000 N                              
+Tayler Fox                                     Sales Representative                      9600 N                              
+Kelly Chung                                    Shipping Clerk                            3800 N                              
+Shelley Higgins                                Accounting Manager                       12000 N                              
+Lex De Haan                                    Administration Vice President            17000 Y                              
+Alexander Hunold                               Programmer                                9000 N                              
+Diana Lorentz                                  Programmer                                4200 N                              
+James Landry                                   Stock Clerk                               2400 N                              
+Hazel Philtanker                               Stock Clerk                               2200 N                              
+Stephen Stiles                                 Stock Clerk                               3200 N                              
+Allan McEwen                                   Sales Representative                      9000 N                              
+Sarath Sewall                                  Sales Representative                      7000 N                              
+Sundar Ande                                    Sales Representative                      6400 N                              
+Nandita Sarchand                               Shipping Clerk                            4200 N                              
+Jennifer Whalen                                Administration Assistant                  4400 Y                              
+John Chen                                      Accountant                                8200 N                              
+Sigal Tobias                                   Purchasing Clerk                          2800 N                              
+Irene Mikkilineni                              Stock Clerk                               2700 N                              
+John Russell                                   Sales Manager                            14000 N                              
+Karen Partners                                 Sales Manager                            13500 N                              
+Alberto Errazuriz                              Sales Manager                            12000 N                              
+David Bernstein                                Sales Representative                      9500 N                              
+Janette King                                   Sales Representative                     10000 N                              
+Patrick Sully                                  Sales Representative                      9500 N                              
+David Lee                                      Sales Representative                      6800 N                              
+Elizabeth Bates                                Sales Representative                      7300 N                              
+Charles Johnson                                Sales Representative                      6200 N                              
+Randall Perkins                                Shipping Clerk                            2500 N                              
+Donald OConnell                                Shipping Clerk                            2600 N                              
+
+ 107 rows selected 
+
+rollback complete.
