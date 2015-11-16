@@ -4,19 +4,22 @@
  * and open the template in the editor.
  */
 package vector.impl;
+
 import vector.Vector;
 import vector.Exceptions.*;
+import java.io.Serializable;
+
+
 /**
  *
  * @author AdminY
  */
-public class LinkedVector implements Vector, Cloneable {
+public class LinkedVector implements Vector, Cloneable, Serializable{
 
     protected Nod head;
     protected int size;
 
-    // Inner Class for Nodes
-    public class Nod {
+    public class Nod implements Serializable{
 	public double element;
 	public Nod next;
 	public Nod prev;
@@ -122,12 +125,14 @@ public class LinkedVector implements Vector, Cloneable {
         if (getSize() != inputVector.getSize()) {
             throw new IncompatibleVectorSizesException();
         } else {
+            Nod current = head;
             for (int i = 0; i < getSize(); i++) {
-                setElement(i, getElement(i) + inputVector.getElement(i));
+                current.element = inputVector.getElement(i) + current.element;
+                current = current.next;
+                //setElement(i, getElement(i) + inputVector.getElement(i));
             }
         }
     }
-/////////////////////////////
     @Override
     public void insertElement(double value, int index) {
         if (index > size || index < 0) {
@@ -156,8 +161,11 @@ public class LinkedVector implements Vector, Cloneable {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        Nod current = head;
         for (int i = 0; i < getSize(); i++) {
-            sb.append(getElement(i)).append(" ");
+            sb.append(current.element).append(" ");
+            current = current.next;
+            //sb.append(getElement(i)).append(" ");
         }
         return sb.toString().trim();
     }
@@ -168,7 +176,7 @@ public class LinkedVector implements Vector, Cloneable {
         LVClone.fillFromVector(this);
         return LVClone;
     }
-    
+    //sum, tostring, equals
     @Override
     public boolean equals(Object obj){
         if (this == obj) return true;
@@ -184,7 +192,6 @@ public class LinkedVector implements Vector, Cloneable {
             current = current.next;
             index++;
         }
-
         return true;
-    }
+    } 
 }

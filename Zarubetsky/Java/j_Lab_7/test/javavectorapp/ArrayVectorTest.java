@@ -6,14 +6,13 @@
 package javavectorapp;
 
 import vector.impl.ArrayVector;
-import org.junit.*;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import vector.impl.LinkedVector;
 
-import java.util.*;
+
 import vector.Exceptions.IncompatibleVectorSizesException;
 import vector.Exceptions.VectorIndexOutOfBoundsException;
 
@@ -25,7 +24,7 @@ public class ArrayVectorTest {
      
     public ArrayVectorTest() {
     }
-    
+     
     @BeforeClass
     public static void setUpClass() {
     }
@@ -34,6 +33,7 @@ public class ArrayVectorTest {
     public static void tearDownClass() {
     }
 
+    
     /**
      * Test of setElement method, of class Vector.
      */
@@ -477,6 +477,9 @@ public class ArrayVectorTest {
     /**
      * Test of clone method, of class Vector.
      */
+    
+    
+    
     @Test
     public void testClone() throws Exception {
         System.out.println("clone");
@@ -486,7 +489,7 @@ public class ArrayVectorTest {
         VectorImpl instance = new VectorImpl(5);
         instance.setData(original);
         // Act
-        Object result1 = instance.clone();
+        Object result1 = instance.clone();                      
         Object result2 = instance.clone();
         ((VectorImpl)result2).setData(new double[0]);
         // Assert
@@ -495,7 +498,7 @@ public class ArrayVectorTest {
         assertArrayEquals(copy, ((VectorImpl)result1).getData(), 0.0);
     }
     
-        //For ArrayVector implimentation testing
+    //For ArrayVector implimentation testing
 
     public class VectorImpl extends ArrayVector {
 
@@ -512,44 +515,42 @@ public class ArrayVectorTest {
         }
 
     }
-   
-    /*
-    //For LinkedVector implimentation testing
     
-    public class VectorImpl extends LinkedVector {
-        
-        public VectorImpl(int size) {
-            super();
-            for (int i=0;i<size;i++) {
-                super.addElement(0.0);
-            }
-        }
-        
-        public double[] getData() {
-            double[] data = new double[size];
-            for (int i=0; i<size;i++) {
-                data[i] = super.goToElement(i).element;
-            }
-            return data;
-        }
-        
-        public void setData(double[] data) {
-            head = null;
-            super.size = 0;
-            for (int i=0; i<data.length;i++) {
-                if (i == 0) {
-                    head = new Nod(data[0]);
-                    head.prev = head;
-                    head.next = head;
-                    super.size = 1;
-                } else {
-                    insertElementBefore(head, new Nod(data[i]));                    
-                }
-               
-            }
-            
-        }
-
-    }
-    */
+        //For LinkedVector implimentation testing
+    
+//    public class VectorImpl extends LinkedVector {
+//        
+//                public VectorImpl(int size) {
+//            super();
+//            for (int i=0;i<size;i++) {
+//                super.addElement(0.0);
+//            }
+//        }
+//        
+//        public double[] getData() {
+//            double[] data = new double[size];
+//            for (int i=0; i<size;i++) {
+//                data[i] = super.goToElement(i).element;
+//            }
+//            return data;
+//        }
+//        
+//        public void setData(double[] data) {
+//            head = null;
+//            super.size = 0;
+//            for (int i=0; i<data.length;i++) {
+//                if (i == 0) {
+//                    head = new Nod(data[0]);
+//                    head.prev = head;
+//                    head.next = head;
+//                    super.size = 1;
+//                } else {
+//                    insertElementBefore(head, new Nod(data[i]));                    
+//                }
+//                
+//            }
+//            
+//        }
+//
+//    }
 }

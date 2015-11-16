@@ -32,7 +32,7 @@ public class LinkedVectorTest {
     public static void tearDownClass() {
     }
 
-    /**
+   /**
      * Test of setElement method, of class Vector.
      */
     @Test
@@ -295,7 +295,7 @@ public class LinkedVectorTest {
      */
     @Test
     public void testInsertElement() {
-        System.out.println("insertElement66666");
+        System.out.println("insertElement");
         // Arrange
         double[] mass = {5.0, -2.9, 0.0, -50000, 9};
         double[] mass1 = {5.0, -2.9, 0.0, -50000, 9, 7.7};
@@ -311,34 +311,15 @@ public class LinkedVectorTest {
         instance2.setData(mass);
         VectorImpl instance3 = new VectorImpl(5);
         instance3.setData(mass);
-        // CONTROL FIRST
-        
-        String result1 = instance1.toString();
-        String result2 = instance1.toString();
-        String result3 = instance1.toString();
-        
-        System.out.println("Before Inserting: " + result1);
-        System.out.println("Before Inserting: " + result2);
-        System.out.println("Before Inserting: " + result3);
-        
         // Act
         instance1.insertElement(element, index1);
         instance2.insertElement(element, index2);
         instance3.insertElement(element, index3);
-        // Control
-        result1 = instance1.toString();
-        result2 = instance1.toString();
-        result3 = instance1.toString();
-        
-        System.out.println("After Inserting:  " + result1);
-        System.out.println("After Inserting:  " + result2);
-        System.out.println("After Inserting:  " + result3);
-        
-        
         // Assert
         assertArrayEquals(mass1, instance1.getData(), 0.0);
         assertArrayEquals(mass2, instance2.getData(), 0.0);
         assertArrayEquals(mass3, instance3.getData(), 0.0);
+        
     }
     
     @Test(expected = VectorIndexOutOfBoundsException.class)
@@ -494,6 +475,9 @@ public class LinkedVectorTest {
     /**
      * Test of clone method, of class Vector.
      */
+    
+    
+    
     @Test
     public void testClone() throws Exception {
         System.out.println("clone");
@@ -503,7 +487,7 @@ public class LinkedVectorTest {
         VectorImpl instance = new VectorImpl(5);
         instance.setData(original);
         // Act
-        Object result1 = instance.clone();
+        Object result1 = instance.clone();                      
         Object result2 = instance.clone();
         ((VectorImpl)result2).setData(new double[0]);
         // Assert
@@ -512,31 +496,9 @@ public class LinkedVectorTest {
         assertArrayEquals(copy, ((VectorImpl)result1).getData(), 0.0);
     }
     
-    /*
-        //For ArrayVector implimentation testing
-
-    public class VectorImpl extends ArrayVector {
-
-        public VectorImpl(int size) {
-            super(size);
-        }
-        
-        public double[] getData() {
-            return super.data;
-        }
-        
-        public void setData(double[] data) {
-            super.data = data;
-        }
-
-    }
-    */
-    
-    //For LinkedVector implimentation testing
-    
     public class VectorImpl extends LinkedVector {
         
-        public VectorImpl(int size) {
+                public VectorImpl(int size) {
             super();
             for (int i=0;i<size;i++) {
                 super.addElement(0.0);
@@ -563,12 +525,8 @@ public class LinkedVectorTest {
                 } else {
                     insertElementBefore(head, new Nod(data[i]));                    
                 }
-               
+                
             }
-            
         }
-
     }
-    
-    
 }

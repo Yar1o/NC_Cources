@@ -4,45 +4,19 @@
  * and open the template in the editor.
  */
 package vector.impl;
-import java.util.Iterator;
+
 import vector.Vector;
 import vector.Exceptions.*;
+import java.io.Serializable;
+
 /**
  *
- * @author User
+ * @author AdminY
  */
-public class ArrayVector implements Vector, Cloneable {
-    
+public class ArrayVector implements Vector, Cloneable, Serializable {
+     
     protected double[] data;
-    /*
-// ИТЕРАТОР    
-    public class MyIterator implements Iterator {
-   
-        private int index;
- 
-    public MyIterator() {
-    }
-    
-    public boolean hasNext() {
-        return index < Vector.getSize();
-    }
-    
-    public Object next() {
-        return array[index++];
-    }
-    
-    public void remove(){
-    }
- 
-    }
-    
-    
-    public Iterator iterator() {
-        return new MyIterator();
-    }
-    
-    */
-    
+     
     // конструкторы
     // конструктор по-умолчанию
     public ArrayVector (int length) {
@@ -78,7 +52,6 @@ public class ArrayVector implements Vector, Cloneable {
         }
     }
     
-
     /*  получение размера вектора  */
     public int getSize() {
         return this.data.length;
