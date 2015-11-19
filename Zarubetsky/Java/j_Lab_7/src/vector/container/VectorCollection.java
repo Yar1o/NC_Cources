@@ -17,8 +17,8 @@ public class VectorCollection implements Collection{
     
     protected Vector[] data;
 
-    public VectorCollection(Vector[] array) {
-        this.data = array;
+    public VectorCollection(Vector[] data) {
+        this.data = data;
     }
     
     @Override
@@ -127,10 +127,6 @@ public class VectorCollection implements Collection{
         else{
             return false;
         }
-        
-        
-        
-        
     }
 
     @Override
@@ -151,7 +147,7 @@ public class VectorCollection implements Collection{
                 remove(data[i]);
                 cnt++;
             }else{
-                i++;//Ask
+                i++;
             }
         }
         if (cnt == 0){return false;}

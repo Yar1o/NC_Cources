@@ -39,9 +39,9 @@ public class VectorCollectionTest{
     public class TestVectorCollection {
         
     }
-    double [] mass1 = {3.14, 2.71, 0, -2.5, 99.12};
-    double [] mass2 = {6.28, 6.48, 0, -2.5, 93.12};
-    double [] mass3 = {3.35, 5.11, 0, -2.5, 16.12};
+    double [] mass1 = {1.1, 1.1, 1.1, 1.1, -1.1};
+    double [] mass2 = {2.2, 2.2, 2.2, 2.2, -2.2};
+    double [] mass3 = {3.3, 3.3, 3.3, 3.3, -3.3};
     ArrayVector arV1 = new ArrayVector(mass1);
     ArrayVector arV2 = new ArrayVector(mass2);
     ArrayVector arV3 = new ArrayVector(mass3);
@@ -182,8 +182,6 @@ public class VectorCollectionTest{
         instance.clear();
     }
     
-    
-    
     /**
     * Test of remove method, of class VectorCollection.
     */
@@ -191,12 +189,11 @@ public class VectorCollectionTest{
     public void testRemove() {
         System.out.println("remove");
         Object o = arV3;
-        VectorCollection instance = expectedCollection2;
+        VectorCollection instance = new VectorCollection(testVectorArray);;
         boolean expResult = true;
         boolean result = instance.remove(o);
         assertEquals(expResult, result);
     }
-    
     
     /**
      * Test of removeAll method, of class VectorCollection.
@@ -204,9 +201,9 @@ public class VectorCollectionTest{
     @Test
     public void testRemoveAll() {
         System.out.println("removeAll");
-        Collection c = null;
-        VectorCollection instance = null;
-        boolean expResult = false;
+        Collection c = new VectorCollection(testVectorArray); //startCollection;
+        VectorCollection instance = new VectorCollection(testVectorArray);
+        boolean expResult = true;
         boolean result = instance.removeAll(c);
         assertEquals(expResult, result);
     }
@@ -217,14 +214,12 @@ public class VectorCollectionTest{
     @Test
     public void testRetainAll() {
         System.out.println("retainAll");
-        Collection c = null;
-        VectorCollection instance = null;
-        boolean expResult = false;
+        Collection c = startCollection;
+        VectorCollection instance = new VectorCollection(testVectorArray);
+        boolean expResult = true;
         boolean result = instance.retainAll(c);
         assertEquals(expResult, result);
     }
-
-
 }
 
 
@@ -238,7 +233,7 @@ public class VectorCollectionTest{
 
 
 /*
-            System.out.println("clear");
+        System.out.println("clear");
         Vector[] expValue = {new ArrayVector(0)};
         VectorCollection instance = new VectorCollection(testVectorArray);
         VectorCollection expResult = new VectorCollection(expValue);
